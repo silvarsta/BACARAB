@@ -153,67 +153,10 @@
                                     class="img-fluiid"><br>{{ $kamus->indonesia }}
                             </div>
                             <h1>{{ $kamus->arab }}<br></h1>
-                                    <p>"{{ $kamus->pelafalan }}"</p>
+                            <p>"{{ $kamus->pelafalan }}"</p>
                         </div>
                     </div>
-                    {{-- <div class="col-lg-3 col-md-6">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/rumah.gif" class="img-fluid"
-                                    alt=""><br> Rumah
-                            </div>
-                            <h1>بَيْتٌ<br< /h1>
-                                    <p>"baytun"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/sajadah (2).png" class="img-fluid"
-                                    alt=""><br>Sajadah</div>
-                            <h1> سَجَّادَّةٌ<br< /h1>
-                                    <p>"Sajjaadatun"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/kasur.png" class="img-fluid"
-                                    alt=""><br>Kasur</div>
-                            <h1>فِرَاشٌ<br< /h1>
-                                    <p>"Firoosyun"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-4">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/toilet.png" class="img-fluid"
-                                    alt=""><br>Toilet</div>
-                            <h1> حَمَّامٌ<br< /h1>
-                                    <p>"Hammaamun"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-4">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/penggaris.png" class="img-fluid"
-                                    alt=""><br>Penggaris</div>
-                            <h1> مِسْطَرَةٌ<br< /h1>
-                                    <p>"Misthorotun"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-4">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/baju.png" class="img-fluid"
-                                    alt=""><br>Baju</div>
-                            <h1>ثَوْبٌ<br< /h1>
-                                    <p>"Tsaubun"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-4">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/kamus/kata/jendela.png" class="img-fluid"
-                                    alt=""><br>Jendela</div>
-                            <h1>شُبَّاكٌ<br< /h1>
-                                    <p>"Syubbaakun"</p>
-                        </div>
-                    </div> --}}
-                    @empty
+                @empty
                 @endforelse
             </div>
         </div>

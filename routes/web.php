@@ -17,6 +17,8 @@ Route::get('/', [landingController::class, 'landing']);
 Route::get('/main', [mainpageController::class, 'main'])->name('main');
 Route::get('/gameHuruf', [gameHurufController::class, 'gameHuruf']);
 Route::get('/gameAngka', [gameAngkaController::class, 'gameAngka']);
+Route::get('/gameKata', [gameKataController::class, 'gameKata']);
+
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 Route::get('/admin/account', [AdminController::class, 'account']);
@@ -53,6 +55,6 @@ Route::patch('/kamus/{kamus}', [KamusController::class, 'update'])
 Route::delete('/kamus/{kamus}', [KamusController::class, 'destroy'])
     ->name('admin.destroy');
 
-Route::get('/gameKata', [KamusController::class, 'gameKata']);
+
 
 

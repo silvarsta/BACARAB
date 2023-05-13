@@ -7,31 +7,31 @@ use Illuminate\Support\Facades\Auth;
 
 class SessionController extends Controller
 {
-    public function loginreg() {
+    public function loginreg()
+    {
         return view('loginreg');
     }
 
-    public function postlogin(Request $request){
+    public function postlogin(Request $request)
+    {
         $validatedData = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        if(Auth::attempt($validatedData)){
+        if (Auth::attempt($validatedData)) {
             $request->session()->regenerate();
             $user = Auth()->user();
-          if($user->role=='admin')
-          {
-            return redirect()->route('admin.dashboard');
-          }  
-          elseif($user->role=='user');
-          {
-            return redirect()->route('main');
-          }
+            if ($user->role == 'admin') {
+                return redirect()->route('admin.dashboard');
+            } elseif ($user->role == 'user'); {
+                return redirect()->route('main');
+            }
             return redirect('/');
-         }
         }
-    public function logout(){
+    }
+    public function logout()
+    {
         Auth::logout();
         return redirect('/');
-        }
+    }
 }

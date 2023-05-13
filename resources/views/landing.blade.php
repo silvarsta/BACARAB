@@ -50,7 +50,7 @@
                     <li><a class="nav-link scrollto" href="#portfolio">Printable</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="nav-link scrollto" href="/loginreg">Login</a></li>
+                    <li class="mx-4"><a class="started scrollto" href="{{ route('loginreg') }}">Get Started</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
 
@@ -65,6 +65,13 @@
                 Temukan keseruan dalam belajar bahasa Arab disini
             </span><br>Ready, set, lets head out !</h2>
         <a href="#" id="btn-parall">Get Started</a>
+        <img src="assets/img/bg4-parall.svg" alt="" id="bgparall">
+        <img src="assets/img/awanfiks1.svg" alt="" id="awan1">
+        <img src="assets/img/awanfiks2.svg" alt="" id="awan2">
+        <img src="assets/img/awanfiks3.svg" alt="" id="awan3">
+        <img src="assets/img/awanfiks4.svg" alt="" id="awan4">
+        <img src="assets/img/book-parall.png" alt="" id="buku">
+        <img src="assets/img/astro-parall.png" alt="" id="astro">
     </section>
 
     <main id="main">
