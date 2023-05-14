@@ -38,16 +38,13 @@
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="index.html">BACARAB</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+            <h1 class="logo me-auto">BACARAB</h1>
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#">Home</a></li>
                     <li><a class="nav-link scrollto" href="#content">Content</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Games</a></li>
-                    <li><a class="nav-link scrollto" href="#portfolio">Printable</a></li>
+                    <li><a class="nav-link scrollto" href="#games">Games</a></li>
+                    <li><a class="nav-link scrollto" href="#started">Video</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     <li class="mx-4"><a class="started scrollto" href="{{ route('loginreg') }}">Get Started</a></li>
@@ -58,33 +55,61 @@
         </div>
     </header>
 
-
-    {{-- PARALLAX SCROLLING --}}
-    <section class="section-parall">
-        <h2 id="text-parall"><span class="span-parall">
-                Temukan keseruan dalam belajar bahasa Arab disini
-            </span><br>Ready, set, lets head out !</h2>
-        <a href="#" id="btn-parall">Get Started</a>
-        <img src="assets/img/bg4-parall.svg" alt="" id="bgparall">
-        <img src="assets/img/awanfiks1.svg" alt="" id="awan1">
-        <img src="assets/img/awanfiks2.svg" alt="" id="awan2">
-        <img src="assets/img/awanfiks3.svg" alt="" id="awan3">
-        <img src="assets/img/awanfiks4.svg" alt="" id="awan4">
-        <img src="assets/img/book-parall.png" alt="" id="buku">
-        <img src="assets/img/astro-parall.png" alt="" id="astro">
-    </section>
-
     <main id="main">
+        {{-- PARALLAX SCROLLING --}}
+        <section class="section-parall">
+
+            <img src="assets/img/bg4-parall.png" alt="" id="bgparall">
+            <img src="assets/img/awanfiks1.png" alt="" id="awan1">
+            <img src="assets/img/awanfiks2.png" alt="" id="awan2">
+            <img src="assets/img/awanfiks4.png" alt="" id="awan4">
+            <img src="assets/img/awanfiks3.png" alt="" id="awan3">
+            <img src="assets/img/astro-parall.png" alt="" id="astro" style="justify-content: flex-end;">
+            <h2 id="text-parall"><span class="span-parall">
+                    Temukan keseruan dalam belajar bahasa Arab disini
+                </span><br>Ready, set, lets head out !</h2>
+            <a href="{{ route('loginreg') }}" id="btn-parall" style="padding-left: 27px;" >Get Started</a>
+            <img src="assets/img/book-parall.png" alt="" id="buku">
+            <script>
+                let text = document.getElementById('text-parall');
+                let button = document.getElementById('btn-parall');
+                let awan1 = document.getElementById('awan1');
+                let awan2 = document.getElementById('awan2');
+                let awan3 = document.getElementById('awan3');
+                let awan4 = document.getElementById('awan4');
+                let astro = document.getElementById('astro');
+                let buku = document.getElementById('buku');
+                let bg = document.getElementById('bgparall');
+
+                window.addEventListener('scroll', () => {
+                    let value = window.scrollY;
+
+                    // text.style.marginTop = value * 2.5 + 'px';
+                    // button.style.marginTop = value * 2.5 + 'px';
+                    astro.style.top = value * -0.8 + 'px';
+                    astro.style.left = value * -1.5 + 'px';
+                    awan1.style.left = value * 1.5 + 'px';
+                    awan1.style.top = value * 0.8 + 'px';
+
+                    awan2.style.left = value * 1.5 + 'px';
+
+                    awan3.style.left = value * -1.5 + 'px';
+                    // awan3.style.top = value * -0.8 + 'px';
+
+                    awan4.style.left = value * -1.5 + 'px';
+                    awan4.style.top = value * 0.8 + 'px';
+
+                    bg.style.marginTop = value * 1 + 'px';
+                });
+            </script>
+        </section>
 
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us section-bg">
             <div class="container-fluid" data-aos="fade-up">
-
                 <div class="row">
-
                     <div
                         class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
                         <div class="content">
                             <h3><strong>Belajar Bahasa Arab untuk Anak</strong></h3>
                             <p>
@@ -154,7 +179,8 @@
                     </div>
 
                     <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-                        style='background-image: url("assets/img/kids.png");' data-aos="zoom-in" data-aos-delay="150">
+                        style='background-image: url("assets/img/kids.png");' data-aos="zoom-in"
+                        data-aos-delay="150">
                         &nbsp;</div>
                 </div>
 
@@ -168,13 +194,10 @@
                                 <div class="pic"><img src="assets/img/apaaja5.jpg" class="img-fluid"
                                         alt=""></div>
                                 <div class="member-info">
-                                    <h4><a href="#services">Games</a></h4>
+                                    <h4><a href="#games">Games</a></h4>
                                     <p>Game - game seru untuk belajar Bahasa Arab dengan mudah</p>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        <i></i> <i></i> <i></i> <i></i>
                                     </div>
                                 </div>
                             </div>
@@ -188,10 +211,7 @@
                                     <h4><a href="">Kosa Kata Arab</a></h4>
                                     <p>Kamus mini berisi kosa kata dalam bahasa Arab yang mudah dipahami</p>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        <i></i> <i></i> <i></i> <i></i>
                                     </div>
                                 </div>
                             </div>
@@ -202,13 +222,10 @@
                                 <div class="pic"><img src="assets/img/apaaja7.jpg" class="img-fluid"
                                         alt=""></div>
                                 <div class="member-info">
-                                    <h4><a href="">Video Belajar</a></h4>
+                                    <h4><a href="#started">Video Belajar</a></h4>
                                     <p>Disini juga ada video video animasi seru yang menyenangkan</p>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        <i></i> <i></i> <i></i> <i></i>
                                     </div>
                                 </div>
                             </div>
@@ -222,10 +239,7 @@
                                     <h4><a href="">Printable</a></h4>
                                     <p>Kumpulan latihan yang dapat dicetak untuk mempermudah latihan</p>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        <i></i> <i></i> <i></i> <i></i>
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +253,7 @@
         </section><!-- End Why Us Section -->
 
         <!-- ======= GAME ======= -->
-        <section id="services" class="services section-bg">
+        <section id="games" class="games section-bg">
 
             <div class="container" data-aos="fade-up">
 
@@ -299,7 +313,7 @@
 
             </div>
         </section>
-        <!-- End Services Section -->
+        <!-- End games Section -->
 
         <!-- Hero section -->
         <section id="started" class="d-flex align-items-center">
@@ -322,7 +336,8 @@
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 started-img aos-init aos-animate" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <img src="assets/img/Learning1a.png" class="img-fluid animated" alt="">
+                        <img src="assets/img/hero-kids.png" class="img-fluid animated" alt=""
+                            style="margin-left: 170px;">
                     </div>
                 </div>
             </div>
