@@ -38,9 +38,16 @@
                             <tr class="table-info">
                                 {{-- <th>{{ $loop->iteration }}</th> --}}
                                 <td>
-                                    <img src="{{ asset('kamus/' . $kamus->gambar) }}" alt="" class="img-fluid"
-                                        style="width: 100px;">
+                                    {{-- <img src="{{ asset('kamus/' . $kamus->gambar) }}" alt="" class="img-fluid"
+                                        style="width: 100px;"> --}}
 
+                                    @if ($kamus->gambar)
+                                        <img src="{{ asset('assets/img/kamus/' . $kamus->gambar) }}"
+                                            alt="{{ $kamus->indonesia }}" class="img-fluid" style="width: 100px;">
+                                    @else
+                                        <img src="{{ asset('assets/img/kamus/default.jpg') }}" alt="gambar-default"
+                                            class="img-fluid" style="width: 100px;">
+                                    @endif
                                 </td>
                                 <td>{{ $kamus->arab }}</td>
                                 <td>{{ $kamus->indonesia }}</td>

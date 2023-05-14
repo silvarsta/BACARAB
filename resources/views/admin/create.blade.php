@@ -45,17 +45,17 @@
                             <div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="angka"
-                                        value="Angka" {{ old('kelompok') == 'Angka' ? 'checked' : '' }}>
+                                        value="angka" {{ old('kelompok') == 'angka' ? 'checked' : '' }}>
                                     <label class="form-check-label" for="angka"> Angka </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="huruf"
-                                        value="Huruf" {{ old('kelompok') == 'Huruf' ? 'checked' : '' }}>
+                                        value="huruf" {{ old('kelompok') == 'huruf' ? 'checked' : '' }}>
                                     <label class="form-check-label" for="huruf"> Huruf </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="kata"
-                                        value="Kata" {{ old('kelompok') == 'Kata' ? 'checked' : '' }}>
+                                        value="kata" {{ old('kelompok') == 'kata' ? 'checked' : '' }}>
                                     <label class="form-check-label" for="kata"> Kata </label>
                                 </div>
                             </div>

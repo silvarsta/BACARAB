@@ -14,11 +14,30 @@
                         {{-- gambar --}}
                         <div class="form-group">
                             <label for="gambar">Gambar</label>
-                            <input type="file" class="form-control @error('gambar') is-invalid @enderror" id="gambar"
+                            {{-- <input type="file" class="form-control @error('gambar') is-invalid @enderror" id="gambar"
                                 name="gambar" value="{{ old('gambar') }}">
                             @error('gambar')
                                 <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                            @enderror --}}
+
+                            @if ($kamus->gambar)
+                                <br>
+                                <img src="{{ asset('assets/img/kamus/' . $kamus->gambar) }}" alt="{{ $kamus->indonesia }}"
+                                    style="max-width: 200px;">
+                                <br><br>
+                                <div class="custom-file">
+                                    <input type="file" name="gambar" id="gambar"
+                                        class="custom-file-input @error('gambar') is-invalid @enderror">
+                                    <label class="custom-file-label" for="gambar">{{ $kamus->gambar }}</label>
+                                </div>
+                            @else
+                                <input type="file" name="gambar" id="gambar"
+                                    class="form-control @error('gambar') is-invalid @enderror">
+                                @error('gambar')
+                                    <span class="invalid-feedback">{{ $message }}</span>
+                                @enderror
+                            @endif
+
                         </div>
                         {{-- indonesia --}}
                         <div class="form-group mt-3">
@@ -43,20 +62,20 @@
                             <div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="angka"
-                                        value="Angka"
-                                        {{ (old('kelompok') ?? $kamus->kelompok) == 'Angka' ? 'checked' : '' }}>
+                                        value="angka"
+                                        {{ (old('kelompok') ?? $kamus->kelompok) == 'angka' ? 'checked' : '' }}>
                                     <label class="form-check-label" for="angka"> Angka </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="huruf"
-                                        value="Huruf"
-                                        {{ (old('kelompok') ?? $kamus->kelompok) == 'Huruf' ? 'checked' : '' }}>
+                                        value="huruf"
+                                        {{ (old('kelompok') ?? $kamus->kelompok) == 'huruf' ? 'checked' : '' }}>
                                     <label class="form-check-label" for="huruf"> Huruf </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="kata"
-                                        value="Kata"
-                                        {{ (old('kelompok') ?? $kamus->kelompok) == 'Kata' ? 'checked' : '' }}>
+                                        value="kata"
+                                        {{ (old('kelompok') ?? $kamus->kelompok) == 'kata' ? 'checked' : '' }}>
                                     <label class="form-check-label" for="kata"> Kata </label>
                                 </div>
                             </div>
@@ -71,7 +90,7 @@
                                 id="pelafalan" name="pelafalan" value="{{ old('pelafalan') ?? $kamus->pelafalan }}">
                         </div>
                         {{-- button --}}
-                        <button type="submit" class="btn btn-primary mt-2">Update</button>
+                        <button type="submit" class="btn btn-primary mt-2" name="submit">Update</button>
                     </div>
                 </form>
                 {{-- end form --}}

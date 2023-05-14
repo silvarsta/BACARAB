@@ -149,7 +149,7 @@
                 @forelse ($kamus as $kamus)
                     <div class="col-lg-3 col-md-6">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="{{ asset('kamus/' . $kamus->gambar) }}" alt=""
+                            <div class="pic"><img src="{{ asset('assets/img/kamus/' . $kamus->gambar) }}" alt=""
                                     class="img-fluiid"><br>{{ $kamus->indonesia }}
                             </div>
                             <h1>{{ $kamus->arab }}<br></h1>
