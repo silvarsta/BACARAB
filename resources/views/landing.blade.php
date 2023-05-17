@@ -12,6 +12,8 @@
     <!-- Favicons -->
     <link href="assets/img/icon/logo1.ico" rel="icon">
     <link href="assets/img/logo.png" rel="apple-touch-icon">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
 
     <!-- Google Fonts -->
     <link
@@ -33,11 +35,9 @@
 </head>
 
 <body>
-
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-
             <h1 class="logo me-auto">BACARAB</h1>
             <nav id="navbar" class="navbar">
                 <ul>
@@ -50,16 +50,14 @@
                     <li class="mx-4"><a class="started scrollto" href="{{ route('loginreg') }}">Get Started</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-
-            </nav><!-- .navbar -->
+            </nav>
         </div>
     </header>
 
     <main id="main">
         {{-- PARALLAX SCROLLING --}}
         <section class="section-parall">
-
-            <img src="assets/img/bg4-parall.png" alt="" id="bgparall">
+            <img src="assets/img/bg5-parall.png" alt="" id="bgparall">
             <img src="assets/img/awanfiks1.png" alt="" id="awan1">
             <img src="assets/img/awanfiks2.png" alt="" id="awan2">
             <img src="assets/img/awanfiks4.png" alt="" id="awan4">
@@ -68,7 +66,7 @@
             <h2 id="text-parall"><span class="span-parall">
                     Temukan keseruan dalam belajar bahasa Arab disini
                 </span><br>Ready, set, lets head out !</h2>
-            <a href="{{ route('loginreg') }}" id="btn-parall" style="padding-left: 27px;" >Get Started</a>
+            <a href="{{ route('loginreg') }}" id="btn-parall" style="padding-left: 27px;">Get Started</a>
             <img src="assets/img/book-parall.png" alt="" id="buku">
             <script>
                 let text = document.getElementById('text-parall');
@@ -84,8 +82,6 @@
                 window.addEventListener('scroll', () => {
                     let value = window.scrollY;
 
-                    // text.style.marginTop = value * 2.5 + 'px';
-                    // button.style.marginTop = value * 2.5 + 'px';
                     astro.style.top = value * -0.8 + 'px';
                     astro.style.left = value * -1.5 + 'px';
                     awan1.style.left = value * 1.5 + 'px';
@@ -94,7 +90,6 @@
                     awan2.style.left = value * 1.5 + 'px';
 
                     awan3.style.left = value * -1.5 + 'px';
-                    // awan3.style.top = value * -0.8 + 'px';
 
                     awan4.style.left = value * -1.5 + 'px';
                     awan4.style.top = value * 0.8 + 'px';
@@ -118,7 +113,6 @@
                                 <br>Alasan mengapa harus mempelajari bahasa Arab :
                             </p>
                         </div>
-
                         <div class="accordion-list">
                             <ul>
                                 <li>
@@ -317,7 +311,6 @@
 
         <!-- Hero section -->
         <section id="started" class="d-flex align-items-center">
-
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 aos-init aos-animate"
@@ -327,8 +320,7 @@
                             Daftar
                             sekarang dan kita bisa belajar sambil bermain bersama!</h2>
                         <div class="d-flex justify-content-center justify-content-lg-start">
-                            <a href="" class="btn-get-started scrollto">Get Started</a>
-                            <!-- HREFNYA NANTI DIARAHI KE REGISTER/LOGIN -->
+                            <a href="{{ route('loginreg') }}" class="btn-get-started scrollto">Get Started</a>
                             <a href="https://youtu.be/yIz9Xns4Dmo&start=49" target="_blank"
                                 class="glightbox btn-watch-video">
                                 <i class="bi bi-play-circle"></i><span>Watch Video</span></a>
@@ -355,18 +347,6 @@
 
                 <div class="faq-list">
                     <ul>
-                        <li data-aos="fade-up" data-aos-delay="300">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-3" class="collapsed">Apa materi yang tersedia di website
-                                ini? <i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                                <p>Website ini menyediakan materi belajar bahasa Arab untuk anak-anak, seperti mengenal
-                                    huruf
-                                    dalam bahasa arab, mengenal angka dalam bahasa arab, kosakata,
-                                    dan pengucapan dasar.</p>
-                            </div>
-                        </li>
                         <li data-aos="fade-up" data-aos-delay="100">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
                                 data-bs-target="#faq-list-1">Bagaimana cara memulai belajar bahasa Arab di website
@@ -381,7 +361,6 @@
                                 </p>
                             </div>
                         </li>
-
                         <li data-aos="fade-up" data-aos-delay="200">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-2" class="collapsed">Bagaimana cara menghubungi tim
@@ -397,10 +376,20 @@
                                 </p>
                             </div>
                         </li>
-
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                data-bs-target="#faq-list-3" class="collapsed">Apa materi yang tersedia di website
+                                ini? <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                                <p>Website ini menyediakan materi belajar bahasa Arab untuk anak-anak, seperti mengenal
+                                    huruf
+                                    dalam bahasa arab, mengenal angka dalam bahasa arab, kosakata,
+                                    dan pengucapan dasar.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-
             </div>
         </section><!-- End Frequently Asked Questions Section -->
 
@@ -412,7 +401,6 @@
                     <h2>Contact</h2>
                     <p>If you have any problems with this website. Please, let us to know.</p>
                 </div>
-
                 <div class="row">
                     <center>
                         <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -476,10 +464,11 @@
                         <h4>Back To</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Content</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Games</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Printable</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#content">Content</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#games">Games</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#started">Video</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">contact</a></li>
                         </ul>
                     </div>
 
@@ -500,7 +489,7 @@
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+            class="bi fa fa-arrow-up"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

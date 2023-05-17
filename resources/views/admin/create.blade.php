@@ -5,7 +5,7 @@
 
     <div class="container pt-5">
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 {{-- form --}}
                 <form action="{{ route('admin.store') }}" method="POST" class="shadow p-3 mb-5 bg-white"
                     enctype="multipart/form-data">
@@ -15,7 +15,7 @@
                     <div class="form-group">
                         {{-- gambar --}}
                         <div class="form-group">
-                            <label for="gambar"><strong>Gambar</strong> </label>
+                            <label for="gambar" class="mb-2"><strong>Gambar</strong> </label>
                             <input type="file" class="form-control @error('gambar') is-invalid @enderror" id="gambar"
                                 name="gambar" value="{{ old('gambar') }}">
                             @error('gambar')
@@ -24,7 +24,7 @@
                         </div>
                         {{-- indonesia --}}
                         <div class="form-group mt-3">
-                            <label for="indonesia"><strong> Kata Dalam Bahasa Indonesia</strong></label>
+                            <label for="indonesia" class="mb-2"><strong> Kata Dalam Bahasa Indonesia</strong></label>
                             <input type="text" class="form-control @error('indonesia') is-invalid @enderror"id="indonesia" name="indonesia" value="{{ old('indonesia') }}">
                             @error('indonesia')
                                 <div class="text-danger">{{ $message }}</div>
@@ -32,7 +32,7 @@
                         </div>
                         {{-- arab --}}
                         <div class="form-group mt-3">
-                            <label for="arab"><strong>Kata Dalam Bahasa Arab</strong> </label>
+                            <label for="arab" class="mb-2"><strong>Kata Dalam Bahasa Arab</strong> </label>
                             <input type="text" class="form-control @error('arab') is-invalid @enderror" id="arab"
                                 name="arab" value="{{ old('arab') }}">
                             @error('arab')
@@ -41,7 +41,7 @@
                         </div>
                         {{-- Kelompok --}}
                         <div class="form-group mb-1 mt-3">
-                            <label><strong>Kelompok</strong> </label>
+                            <label class="mb-2"><strong>Kelompok</strong> </label>
                             <div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="kelompok" id="angka"
@@ -65,11 +65,11 @@
                         </div>
                         {{-- Pelafalan --}}
                         <div class="form-group mt-3">
-                            <label for="alamat"><strong>Pelafalan</strong> </label>
+                            <label for="alamat" class="mb-2"><strong>Pelafalan</strong> </label>
                             <input type="text" class="form-control @error('pelafalan') is-invalid @enderror"id="pelafalan" name="pelafalan" value="{{ old('pelafalan') }}">
                         </div>
                         {{-- Button --}}
-                        <button type="submit" class="btn btn-primary mt-2">Send</button>
+                        <center><button type="submit" class="btn btn-primary mt-4" style="padding: 5px 40px;">Send</button></center>
                     </div>
                 </form>
                 {{-- end form --}}
