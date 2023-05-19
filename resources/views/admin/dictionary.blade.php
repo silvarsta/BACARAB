@@ -36,11 +36,7 @@
                     <tbody class="table-border-bottom-0">
                         @forelse ($kamus as $kamus)
                             <tr class="table-info">
-                                {{-- <th>{{ $loop->iteration }}</th> --}}
                                 <td>
-                                    {{-- <img src="{{ asset('kamus/' . $kamus->gambar) }}" alt="" class="img-fluid"
-                                        style="width: 100px;"> --}}
-
                                     @if ($kamus->gambar)
                                         <img src="{{ asset('assets/img/kamus/' . $kamus->gambar) }}"
                                             alt="{{ $kamus->indonesia }}" class="img-fluid" style="width: 80px;">
