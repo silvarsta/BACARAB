@@ -38,7 +38,6 @@
                                 <td>
                                     {{-- <img src="{{ asset('printable/' . $printable->gambar) }}" alt="" class="img-fluid"
                                         style="width: 100px;"> --}}
-
                                     @if ($printable->gambar)
                                         <img src="{{ asset('assets/img/printable/' . $printable->gambar) }}"
                                             alt="{{ $printable->indonesia }}" class="img-fluid" style="width: 80px;">

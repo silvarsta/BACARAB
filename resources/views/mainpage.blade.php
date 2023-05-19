@@ -10,7 +10,7 @@
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                         <div class="pic"><img src="assets/img/apaaja5.jpg" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4><a href="#services">Games</a></h4>
+                            <h4><a href="#games">Games</a></h4>
                             <p>Game - game seru untuk belajar Bahasa Arab dengan mudah</p>
                             <div class="social">
                                 <a href=""><i class="ri-twitter-fill"></i></a>
@@ -74,10 +74,8 @@
         </div>
     </section><!-- End Team Section -->
 
-    </section><!-- End Why Us Section -->
-
     <!-- ======= GAME ======= -->
-    <section id="services" class="services section-bg">
+    <section id="games" class="games section-bg">
 
         <div class="container" data-aos="fade-up">
 
@@ -132,10 +130,10 @@
 
         </div>
     </section>
-    <!-- End Services Section -->
+    <!-- End games Section -->
 
     <!-- Video -->
-    <div class="basic-4">
+    <div class="video basic-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

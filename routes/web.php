@@ -29,9 +29,14 @@ Route::get('/admin/victor', [AdminController::class, 'victor']);
 
 Route::get('/loginreg', [SessionController::class, 'loginreg'])->name('loginreg');
 
+
 Route::post('/postlogin', [SessionController::class, 'postlogin'])->name('postlogin');
 
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
+
+Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('auth', 'role:admin');
+
+Route::get('/main', [mainpageController::class, 'main'])->name('main')->middleware('auth', 'role:user');
 
 
 
@@ -50,7 +55,7 @@ Route::patch('/kamus/{kamus}', [KamusController::class, 'update'])
 Route::delete('/kamus/{kamus}', [KamusController::class, 'destroy'])
     ->name('admin.destroy');
 
-    
+
 Route::get('/admin/printable', [PrintableController::class, 'printable'])
     ->name('admin.printable');
 Route::get('/printable/create', [PrintableController::class, 'create'])
@@ -65,5 +70,3 @@ Route::patch('/printable/{printable}', [PrintableController::class, 'update'])
     ->name('admin.update');
 Route::delete('/printable/{printable}', [PrintableController::class, 'destroy'])
     ->name('admin.destroy');
-
-

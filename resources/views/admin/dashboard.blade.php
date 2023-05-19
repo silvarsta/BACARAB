@@ -12,8 +12,7 @@
                         <div class="d-flex align-items-end row">
                             <div class="col-sm-7">
                                 <div class="card-body">
-                                    <h3 class="card-title text-primary">Hallo John! </h3>
-                                </div>
+                                    <h3 class="card-title text-primary">Hallo {{ Auth::user()->name }}! </h3>                                </div>
                             </div>
                             <div class="col-sm-5 text-center text-sm-left">
                                 <div class="card-body pb-0 px-0 px-md-4">
@@ -32,12 +31,11 @@
                                 <div class="card-body">
                                     <div class="card-title d-flex align-items-start justify-content-between">
                                         <div class="avatar flex-shrink-0">
-                                            <img src="../assets/img/icons/unicons/chart-success.png" alt="chart success"
-                                                class="rounded" />
+                                            <img src="{{ asset('assets/img/admin/icon_kamus.png') }}" alt="Kamus">
                                         </div>
                                     </div>
-                                    <span class="fw-semibold d-block mb-1">Profit</span>
-                                    <h3 class="card-title mb-2">$12,628</h3>
+                                    <span class="fw-semibold d-block mb-1">Kamus</span>
+                                    <h3 class="card-title mb-2">jumlah kamus</h3>
                                     <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i>
                                         +72.80%</small>
                                 </div>
@@ -48,12 +46,12 @@
                                 <div class="card-body">
                                     <div class="card-title d-flex align-items-start justify-content-between">
                                         <div class="avatar flex-shrink-0">
-                                            <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card"
+                                            <img src="{{ asset('assets/img/admin/icon_printable.png') }}" alt="Printable"
                                                 class="rounded" />
                                         </div>
                                     </div>
-                                    <span>Sales</span>
-                                    <h3 class="card-title text-nowrap mb-1">$4,679</h3>
+                                    <span>Printable</span>
+                                    <h3 class="card-title text-nowrap mb-1">Jumlah <br> paper</h3>
                                     <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i>
                                         +28.42%</small>
                                 </div>

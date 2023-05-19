@@ -20,14 +20,14 @@ class UserSeeder extends Seeder
             'name' => 'Vicy',
             'role' => 'admin',
             'email' => 'admin1@gmail.com',
-            'password' => Hash::make('12345')
+            'password' => bcrypt('12345')
         ]);
 
         User::create([
             'name' => 'valen',
             'role' => 'user',
             'email' => 'user1@gmail.com',
-            'password' => Hash::make('valen123')
+            'password' => bcrypt('valen123')
         ]);
     }
 }

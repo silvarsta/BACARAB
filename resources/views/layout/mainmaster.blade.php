@@ -37,13 +37,13 @@
             <h1 class="logo me-auto"><a href="/">BACARAB</a></h1>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="#"><b>Home</b></a></li>
+                    <li><a class="nav-link scrollto active" href="#"><b>Home</b></a></li>
                     <li><a class="nav-link scrollto" href="#content"><b>Content</b></a></li>
-                    <li><a class="nav-link scrollto" href="#services"><b> Games </b></a></li>
-                    <li><a class="nav-link scrollto" href="#portfolio"><b> Printable </b></a></li>
-                    <li><a class="nav-link scrollto" href=""><b> Kamus </b></a></li>
+                    <li><a class="nav-link scrollto" href="#games"><b> Games </b></a></li>
+                    <li><a class="nav-link scrollto" href="#video"><b> Video </b></a></li>
+                    {{-- <li><a class="nav-link scrollto" href=""><b> Kamus </b></a></li> --}}
                     <li><a class="nav-link scrollto" href="#contact"><b> Contact </a></li>
-                    <li><a class="login scrollto mx-5" href="/"><b> Log Out </b></a></li>
+                    <li><a class="mx-3" id="btn-parall" href="/" style="padding-left: 40px;"><b>Log Out</b></a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
 
