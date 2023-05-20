@@ -12,7 +12,9 @@ class PrintableController extends Controller
     public function printable()
     {
         $printable = Printable::all();
-        return view('admin.printable', ['printable' => $printable]);
+        $printableCount = Printable::count();
+
+        return view('admin.printable', ['printable' => $printable], compact('printableCount'));
     }
 
     public function create()

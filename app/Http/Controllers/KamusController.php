@@ -11,7 +11,8 @@ class KamusController extends Controller
     public function dictionary()
     {
         $kamus = Kamus::all();
-        return view('admin.dictionary', ['kamus' => $kamus]);
+        $kamusCount = Kamus::count();
+        return view('admin.dictionary', ['kamus' => $kamus], compact('kamusCount'));
     }
 
     public function create()

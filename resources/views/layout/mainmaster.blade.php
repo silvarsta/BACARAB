@@ -9,16 +9,17 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/icon/logo1.ico" rel="icon">
-    <link href="assets/img/logo.png" rel="apple-touch-icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
 
     <!-- Vendor CSS Files -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -41,17 +42,26 @@
                     <li><a class="nav-link scrollto" href="#content"><b>Content</b></a></li>
                     <li><a class="nav-link scrollto" href="#games"><b> Games </b></a></li>
                     <li><a class="nav-link scrollto" href="#video"><b> Video </b></a></li>
-                    {{-- <li><a class="nav-link scrollto" href=""><b> Kamus </b></a></li> --}}
                     <li><a class="nav-link scrollto" href="#contact"><b> Contact </a></li>
-                    <li><a class="mx-3" id="btn-parall" href="/" style="padding-left: 40px;"><b>Log Out</b></a></li>
                 </ul>
+                <div class="profile-dropdown">
+                    <div class="profile-dropdown-btn">
+                        <div class="profile-img">
+                            <img src="{{ asset('assets/img/icon/user-icon.png') }}" alt="User-prifile">
+                        </div>
+                        <span>
+                            {{ Auth::user()->name }}
+                            <i class="fa fa-angle-down"></i>
+                        </span>
+                    </div>
+                </div>
                 <i class="bi bi-list mobile-nav-toggle"></i>
 
             </nav><!-- .navbar -->
         </div>
     </header>
     <!-- corousel -->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="height: 100vh;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -93,52 +103,6 @@
         @yield('content')
 
 
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>If you have any problems with this website. Please, let us to know.</p>
-                </div>
-
-                <div class="row">
-                    <center>
-                        <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
-                            <form action="" method="post" role="form" class="php-email-form">
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label for="name">Your Name</label>
-                                        <input type="text" name="name" class="form-control" id="name"
-                                            required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="name">Your Email</label>
-                                        <input type="email" class="form-control" name="email" id="email"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Subject</label>
-                                    <input type="text" class="form-control" name="subject" id="subject"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Message</label>
-                                    <textarea class="form-control" name="message" rows="5" required></textarea>
-                                </div>
-                                <div class="my-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                </div>
-                                <div class="text-center"><button type="submit">Send Message</button></div>
-                            </form>
-                        </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Contact Section -->
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -180,7 +144,7 @@
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+            class="bi fa fa-arrow-up"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

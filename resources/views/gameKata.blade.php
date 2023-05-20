@@ -26,14 +26,43 @@
                         <div class="icon-box">
                             <div class="portfolio-img"><img src="assets/img/game-3.png" class="img-fluid" alt="">
                             </div>
-                            <h4 class="mt-5"><a href="">Petualangan Kosakata Bahasa Arab dalam Game</a></h4>
+                            <h4 class="mt-5">Petualangan Kosakata Bahasa Arab dalam Game</h4>
                             <p>Ini didesain untuk membantu pengguna dalam memperkaya kosakata mereka dalam bahasa
                                 Arab dengan cara yang menyenangkan dan interaktif</p>
+                            <button class="tombol tombol-primer"><h5 class="mt-2"><a class="whiteAnchor" href="/bermainGameKata">Klik Untuk Bermain</a></h5></button>
                         </div>
                 </div>
         </div>
     </section>
     <!-- End Game Section -->
+
+    <style>
+        .whiteAnchor{
+            color: #fff
+        }
+
+        .tombol {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        }
+
+        .tombol-primer {
+        background-color: #2BA4D3;
+        color: #fff;
+        }
+
+        .tombol-primer:hover {
+        background-color: #207394;
+        }
+    </style>
 
     <!-- Video -->
     <div class="basic-4">

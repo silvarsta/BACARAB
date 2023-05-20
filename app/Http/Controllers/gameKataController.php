@@ -13,7 +13,8 @@ class gameKataController extends Controller
     {
         $kamus = Kamus::all();
         $printable = Printable::all();
-        return view('gameKata', ['kamus' => $kamus]);
+        $kamusKata = Kamus::where('kelompok', 'kata')->get();
+        $printableKata = Printable::where('kelompok', 'kata')->get();
+        return view('gameKata', compact('kamus', 'printable', 'kamusKata', 'printableKata'));
     }
-
 }

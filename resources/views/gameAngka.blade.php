@@ -24,17 +24,46 @@
                             <div class="icon-box">
                                 <div class="portfolio-img"><img src="assets/img/game-2.png" class="img-fluid" alt="">
                                 </div>
-                                <h4 class="mt-5"><a href="">Mengenal Angka dalam Bahasa Arab Lewat Game </a></h4>
+                                <h4 class="mt-5">Mengenal Angka dalam Bahasa Arab Lewat Game</h4>
                                 <p>sebuah game edukatif yang didesain untuk membantu pengguna dalam memahami dan
                                     menguasai angka dalam
                                     bahasa
                                     Arab dengan mudah dan menyenangkan.</p>
+                                <button class="tombol tombol-primer"><h5 class="mt-2"><a class="whiteAnchor" href="/bermainGameAngka">Klik Untuk Bermain</a></h5></button>
                             </div>
                     </div>
             </div>
             </div>
         </section>
         <!-- End Game Section -->
+
+        <style>
+            .whiteAnchor{
+                color: #fff
+            }
+    
+            .tombol {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            }
+    
+            .tombol-primer {
+            background-color: #2BA4D3;
+            color: #fff;
+            }
+    
+            .tombol-primer:hover {
+            background-color: #207394;
+            }
+        </style>
 
         <!-- Video -->
         <div class="basic-4">
