@@ -12,7 +12,7 @@
             </div>
             <div class="col col-2">
                 {{-- ADD --}}
-                <a href="{{ route('admin.create') }}" class="btn btn-info btn-sm mt-4">Tambah printable</a>
+                <a href="{{ route('admin.createPrint') }}" class="btn btn-info btn-sm mt-4">Tambah printable</a>
 
             </div>
             @if (session()->has('pesan'))
@@ -25,7 +25,7 @@
                 <table class="table text-center" style="width: 100%;">
                     <thead>
                         <tr>
-                            <th style="width: 30%;">Gambar</th>
+                            <th style="width: 25%;">Gambar</th>
                             <th>Src Gambar</th>
                             <th>Kelompok</th>
                             <th>Actions</th>
@@ -34,13 +34,10 @@
                     <tbody class="table-border-bottom-0">
                         @forelse ($printable as $printable)
                             <tr class="table-info">
-                                {{-- <th>{{ $loop->iteration }}</th> --}}
                                 <td>
-                                    {{-- <img src="{{ asset('printable/' . $printable->gambar) }}" alt="" class="img-fluid"
-                                        style="width: 100px;"> --}}
                                     @if ($printable->gambar)
                                         <img src="{{ asset('assets/img/printable/' . $printable->gambar) }}"
-                                            alt="{{ $printable->indonesia }}" class="img-fluid" style="width: 80px;">
+                                            alt="{{ $printable->indonesia }}" class="img-fluid" style="width: 100px;">
                                     @else
                                         <img src="{{ asset('assets/img/printable/default.jpg') }}" alt="gambar-default"
                                             class="img-fluid" style="width: 100px;">
@@ -53,12 +50,12 @@
                                         style="
                                         display: flex;
                                         flex-wrap: nowrap;
-                                        justify-content: flex-start;
+                                        justify-content: center;
                                         align-items: center;
                                         gap: 10px;">
-                                        <a href="{{ route('admin.edit', ['printable' => $printable->id]) }}"
+                                        <a href="{{ route('admin.editPrint', ['printable' => $printable->id]) }}"
                                             class="btn btn-info btn-sm mt-1" style="padding: 3px 20px;">Edit</a>
-                                        <form action="{{ route('admin.destroy', ['printable' => $printable->id]) }}"
+                                        <form action="{{ route('admin.destroyPrint', ['printable' => $printable->id]) }}"
                                             method="POST">
                                             @method('DELETE')
                                             @csrf

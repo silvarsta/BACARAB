@@ -1,15 +1,13 @@
-@extends('layout.mainmaster')
+@extends('layout.maingame')
 @section('title', 'BACARAB | GameKata')
 
 @section('content')
 
 
     <!-- ======= GAME ======= -->
-    <section id="services" class="services section-bg">
-
+    <section id="games" class="games section-bg">
         <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
+            <div class="section-title ,t-4">
                 <h2>GAMES KATA</h2>
                 Syubbaakun <p>"Selamat datang di section game, tempat di mana kamu dapat belajar bahasa Arab dengan cara
                     yang
@@ -29,7 +27,10 @@
                             <h4 class="mt-5">Petualangan Kosakata Bahasa Arab dalam Game</h4>
                             <p>Ini didesain untuk membantu pengguna dalam memperkaya kosakata mereka dalam bahasa
                                 Arab dengan cara yang menyenangkan dan interaktif</p>
-                            <button class="tombol tombol-primer"><h5 class="mt-2"><a class="whiteAnchor" href="/bermainGameKata">Klik Untuk Bermain</a></h5></button>
+                            <button class="tombol tombol-primer mt-4">
+                                <h5 class="mt-2"><a class="whiteAnchor" href="/bermainGameKata">Klik Untuk Bermain</a>
+                                </h5>
+                            </button>
                         </div>
                 </div>
         </div>
@@ -37,40 +38,40 @@
     <!-- End Game Section -->
 
     <style>
-        .whiteAnchor{
+        .whiteAnchor {
             color: #fff
         }
 
         .tombol {
-        display: inline-block;
-        padding: 5px 10px;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .tombol-primer {
-        background-color: #2BA4D3;
-        color: #fff;
+            background-color: #55f4ff;
+            color: #fff;
         }
 
         .tombol-primer:hover {
-        background-color: #207394;
+            background-color: #4bc8f9;
+            color: #fff
         }
     </style>
 
     <!-- Video -->
-    <div class="basic-4">
+    <div class="basic-4" id="video">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Video</h2>
-
                     <!-- Video Preview -->
                     <div class="image-container">
                         <div class="video-wrapper">
@@ -82,9 +83,8 @@
                                         <span></span>
                                     </span>
                             </a>
-                        </div> <!-- end of video-wrapper -->
-                    </div> <!-- end of image-container -->
-                    <!-- end of video preview -->
+                        </div>
+                    </div>
                     <!-- Video Preview -->
                     <div class="image-container mt-5">
                         <div class="video-wrapper">
@@ -96,19 +96,18 @@
                                         <span></span>
                                     </span>
                             </a>
-                        </div> <!-- end of video-wrapper -->
-                    </div> <!-- end of image-container -->
-                    <!-- end of video preview -->
+                        </div>
+                    </div>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-4 -->
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end of video -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
+        <div class="container" id="portofolio" data-aos="fade-up">
 
             <div class="section-title">
                 <h2>Printable</h2>
@@ -175,14 +174,14 @@
                 <p>---</p>
             </div>
             <div class="row">
-                @forelse ($kamus as $kamus)
+                @forelse ($kamusKata as $kamusKata)
                     <div class="col-lg-3 col-md-6">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="{{ asset('assets/img/kamus/' . $kamus->gambar) }}" alt=""
-                                    class="img-fluiid"><br>{{ $kamus->indonesia }}
+                            <div class="pic"><img src="{{ asset('assets/img/kamus/' . $kamusKata->gambar) }}"
+                                    alt="" class="img-fluiid"><br>{{ $kamusKata->indonesia }}
                             </div>
-                            <h1>{{ $kamus->arab }}<br></h1>
-                            <p>"{{ $kamus->pelafalan }}"</p>
+                            <h1>{{ $kamusKata->arab }}<br></h1>
+                            <p>"{{ $kamusKata->pelafalan }}"</p>
                         </div>
                     </div>
                 @empty

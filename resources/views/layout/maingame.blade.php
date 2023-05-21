@@ -40,11 +40,11 @@
             <h1 class="logo me-auto"><a href="/">BACARAB</a></h1>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#"><b>Home</b></a></li>
-                    <li><a class="nav-link scrollto" href="#content"><b>Content</b></a></li>
-                    <li><a class="nav-link scrollto" href="#games"><b> Games </b></a></li>
+                    <li><a class="nav-link scrollto" href="/main"><b>Home</b></a></li>
+                    <li><a class="nav-link scrollto" href="#games"><b>Games</b></a></li>
                     <li><a class="nav-link scrollto" href="#video"><b> Video </b></a></li>
-                    <li><a class="nav-link scrollto" href="#contact"><b> Contact </a></li>
+                    <li><a class="nav-link scrollto" href="#portofolio"><b> Printable </b></a></li>
+                    <li><a class="nav-link scrollto" href="#kamus"><b>Kamus</a></li>
                     <li>
                         <a href="/profile" class="nav-link scrollto"
                             style="display: flex; align-items: center;">
@@ -131,11 +131,11 @@
                     <div class="col-lg-6 col-md-6 footer-links">
                         <h4>Back To</h4>
                         <ul>
-                            <li><a class="nav-link scrollto active" href="#"><b>Home</b></a></li>
-                            <li><a class="nav-link scrollto" href="#content"><b>Content</b></a></li>
-                            <li><a class="nav-link scrollto" href="#games"><b> Games </b></a></li>
-                            <li><a class="nav-link scrollto" href="#video"><b> Video </b></a></li>
-                            <li><a class="nav-link scrollto" href="#contact"><b> Contact </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/main">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#games">Games</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#video">Video</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#portofolio">Printable</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#kamus">Kamus</a></li>
                         </ul>
                     </div>
                 </div>

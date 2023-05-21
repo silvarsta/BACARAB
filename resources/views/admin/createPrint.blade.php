@@ -7,10 +7,10 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 {{-- form --}}
-                <form action="{{ route('admin.store') }}" method="POST" class="shadow p-3 mb-5 bg-white"
+                <form action="{{ route('admin.storePrint') }}" method="POST" class="shadow p-3 mb-5 bg-white"
                     enctype="multipart/form-data">
                     @csrf
-                    <h3 style="margin-bottom: 20px;"><b> Form Mini Kamus </b></h3>
+                    <h3 style="margin-bottom: 20px;"><b> Form Printable </b></h3>
                     <hr>
                     <div class="form-group">
                         {{-- gambar --}}
@@ -22,20 +22,11 @@
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        {{-- indonesia --}}
+                        {{-- Src Gambar --}}
                         <div class="form-group mt-3">
-                            <label for="indonesia" class="mb-2"><strong> Kata Dalam Bahasa Indonesia</strong></label>
-                            <input type="text" class="form-control @error('indonesia') is-invalid @enderror"id="indonesia" name="indonesia" value="{{ old('indonesia') }}">
-                            @error('indonesia')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        {{-- arab --}}
-                        <div class="form-group mt-3">
-                            <label for="arab" class="mb-2"><strong>Kata Dalam Bahasa Arab</strong> </label>
-                            <input type="text" class="form-control @error('arab') is-invalid @enderror" id="arab"
-                                name="arab" value="{{ old('arab') }}">
-                            @error('arab')
+                            <label for="src_gambar" class="mb-2"><strong> Keterangan Gambar</strong></label>
+                            <input type="text" class="form-control @error('src_gambar') is-invalid @enderror"id="src_gambar" name="src_gambar" value="{{ old('src_gambar') }}">
+                            @error('src_gambar')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -62,11 +53,6 @@
                             @error('kelompok')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
-                        </div>
-                        {{-- Pelafalan --}}
-                        <div class="form-group mt-3">
-                            <label for="alamat" class="mb-2"><strong>Pelafalan</strong> </label>
-                            <input type="text" class="form-control @error('pelafalan') is-invalid @enderror"id="pelafalan" name="pelafalan" value="{{ old('pelafalan') }}">
                         </div>
                         {{-- Button --}}
                         <center><button type="submit" class="btn btn-primary mt-4" style="padding: 5px 40px;">Send</button></center>

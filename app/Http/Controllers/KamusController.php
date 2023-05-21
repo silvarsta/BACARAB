@@ -15,12 +15,12 @@ class KamusController extends Controller
         return view('admin.dictionary', ['kamus' => $kamus], compact('kamusCount'));
     }
 
-    public function create()
+    public function createKamus()
     {
-        return view('admin.create');
+        return view('admin.createKms');
     }
 
-    public function store(Request $request)
+    public function storeKamus(Request $request)
     {
         $validateData = $request->validate([
             'gambar' => 'required|file|image|max:2000',
@@ -40,12 +40,12 @@ class KamusController extends Controller
         return redirect()->route('admin.dictionary')->with('pesan', "Penambahan data {$validateData['indonesia']} berhasil");
     }
 
-    public function edit(Kamus $kamus)
+    public function editKamus(Kamus $kamus)
     {
-        return view('admin.edit', ['kamus' => $kamus]);
+        return view('admin.editKms', ['kamus' => $kamus]);
     }
 
-    public function update(Request $request, Kamus $kamus)
+    public function updateKamus(Request $request, Kamus $kamus)
     {
         $validateData = $request->validate([
             'gambar' => 'nullable|file|image|max:2000',
@@ -74,7 +74,7 @@ class KamusController extends Controller
     }
 
 
-    public function destroy(Kamus $kamus)
+    public function destroyKamus(Kamus $kamus)
     {
         // Hapus gambar dari storage
         Storage::delete('public/assets/img/kamus/' . $kamus->gambar);

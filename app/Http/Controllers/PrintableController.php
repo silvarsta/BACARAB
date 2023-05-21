@@ -17,12 +17,12 @@ class PrintableController extends Controller
         return view('admin.printable', ['printable' => $printable], compact('printableCount'));
     }
 
-    public function create()
+    public function createPrintable()
     {
-        return view('admin.create');
+        return view('admin.createPrint');
     }
 
-    public function store(Request $request)
+    public function storePrintable(Request $request)
     {
         $validateData = $request->validate([
             'gambar' => 'required|file|image|max:2000',
@@ -40,12 +40,12 @@ class PrintableController extends Controller
         return redirect()->route('admin.printable')->with('pesan', "Penambahan data {$validateData['src_gambar']} berhasil");
     }
 
-    public function edit(Printable $printable)
+    public function editPrintable(Printable $printable)
     {
-        return view('admin.edit', ['printable' => $printable]);
+        return view('admin.editPrint', ['printable' => $printable]);
     }
 
-    public function update(Request $request, Printable $printable)
+    public function updatePrintable(Request $request, Printable $printable)
     {
         $validateData = $request->validate([
             'gambar' => 'nullable|file|image|max:2000',
@@ -67,12 +67,12 @@ class PrintableController extends Controller
 
         $printable->update($validateData);
 
-        return redirect()->route('admin.dictionary', ['printable' => $printable->id])
+        return redirect()->route('admin.printable', ['printable' => $printable->id])
             ->with('pesan', "Update data {$validateData['src_gambar']} berhasil");
     }
 
 
-    public function destroy(Printable $printable)
+    public function destroyPrintable(Printable $printable)
     {
         // Hapus gambar dari storage
         Storage::delete('public/assets/img/printable/' . $printable->gambar);

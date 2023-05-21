@@ -12,7 +12,7 @@
             </div>
             <div class="col col-2">
                 {{-- ADD --}}
-                <a href="{{ route('admin.create') }}" class="btn btn-info btn-sm mt-4">Tambah Kamus</a>
+                <a href="{{ route('admin.createKms') }}" class="btn btn-info btn-sm mt-4">Tambah Kamus</a>
 
             </div>
             @if (session()->has('pesan'))
@@ -50,34 +50,34 @@
                                 <td>{{ $kamus->pelafalan }}</td>
                                 <td><span class="badge bg-label-info me-1">{{ $kamus->kelompok }}</span></td>
                                 <td>
-                                    <div class="button-row" style="
+                                    <div class="button-row"
+                                        style="
                                         display: flex;
                                         flex-wrap: nowrap;
                                         justify-content: flex-start;
                                         align-items: center;
                                         gap: 10px;">
-                                        <a href="{{ route('admin.edit', ['kamus' => $kamus->id]) }}"
+                                        <a href="{{ route('admin.editKms', ['kamus' => $kamus->id]) }}"
                                             class="btn btn-info btn-sm mt-1" style="padding: 3px 20px;">Edit</a>
-                                        <form action="{{ route('admin.destroy', ['kamus' => $kamus->id]) }}"
+                                        <form action="{{ route('admin.destroyKamus', ['kamus' => $kamus->id]) }}"
                                             method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            <button type="submit" class="btn btn-info btn-sm mt-1" style="padding: 3px 12px;">Hapus</button>
+                                            <button type="submit" class="btn btn-info btn-sm mt-1"
+                                                style="padding: 3px 12px;">Hapus</button>
+                                            {{-- Sweet Allert --}}
+
                                         </form>
                                     </div>
                                 </td>
                             @empty
                         @endforelse
-
+                    </tbody>
+                </table>
             </div>
         </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-    </div>
 
-    <!--/ Contextual Classes -->
+        <!--/ Contextual Classes -->
 
 
-@endsection
+    @endsection

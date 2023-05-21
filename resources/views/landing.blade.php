@@ -41,12 +41,12 @@
             <h1 class="logo me-auto">BACARAB</h1>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#content">Content</a></li>
-                    <li><a class="nav-link scrollto" href="#games">Games</a></li>
-                    <li><a class="nav-link scrollto" href="#started">Video</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto active text-white" href="#">Home</a></li>
+                    <li><a class="nav-link scrollto text-white" href="#content">Content</a></li>
+                    <li><a class="nav-link scrollto text-white" href="#games">Games</a></li>
+                    <li><a class="nav-link scrollto text-white" href="#started">Video</a></li>
+                    <li><a class="nav-link scrollto text-white" href="#faq">Question</a></li>
+                    <li><a class="nav-link scrollto text-white" href="#contact">Contact</a></li>
                     <li class="mx-4"><a class="started scrollto" href="{{ route('loginreg') }}">Get Started</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -404,27 +404,39 @@
                 <div class="row">
                     <center>
                         <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
-                            <form action="" method="post" role="form" class="php-email-form">
+                            <form action="{{ route('main.store') }}" method="POST" class="php-email-form">
+                                @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="name">Your Name</label>
-                                        <input type="text" name="name" class="form-control" id="name"
+                                        <input type="text" name="name"
+                                            class="form-control @error('name') is-invalid @enderror" id="name"
                                             required>
+                                        @error('name')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="name">Your Email</label>
-                                        <input type="email" class="form-control" name="email" id="email"
-                                            required>
+                                        <input type="email"
+                                            class="form-control @error('email') is-invalid @enderror" name="email"
+                                            id="email" required>
+                                        @error('email')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Subject</label>
-                                    <input type="text" class="form-control" name="subject" id="subject"
-                                        required>
+                                    <input type="text" class="form-control @error('subject') is-invalid @enderror"
+                                        name="subject" id="subject" required>
+                                    @error('subject')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Message</label>
-                                    <textarea class="form-control" name="message" rows="5" required></textarea>
+                                    <textarea class="form-control" name="message" rows="5" required> </textarea>
                                 </div>
                                 <div class="my-3">
                                     <div class="loading">Loading</div>
@@ -434,7 +446,6 @@
                                 <div class="text-center"><button type="submit">Send Message</button></div>
                             </form>
                         </div>
-
                 </div>
 
             </div>
@@ -467,8 +478,8 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#content">Content</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#games">Games</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#started">Video</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#faq">Question</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
                         </ul>
                     </div>
 

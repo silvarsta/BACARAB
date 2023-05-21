@@ -13,10 +13,7 @@
                             <h4><a href="#games">Games</a></h4>
                             <p>Game - game seru untuk belajar Bahasa Arab dengan mudah</p>
                             <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                <i></i> <i></i> <i></i> <i></i>
                             </div>
                         </div>
                     </div>
@@ -26,13 +23,10 @@
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                         <div class="pic"><img src="assets/img/apaaja4.jpg" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4><a href="">Kosa Kata Arab</a></h4>
+                            <h4><a href="#content">Kosa Kata Arab</a></h4>
                             <p>Kamus mini berisi kosa kata dalam bahasa Arab yang mudah dipahami</p>
                             <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                <i></i> <i></i> <i></i> <i></i>
                             </div>
                         </div>
                     </div>
@@ -42,13 +36,10 @@
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                         <div class="pic"><img src="assets/img/apaaja7.jpg" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4><a href="">Video Belajar</a></h4>
+                            <h4><a href="#video">Video Belajar</a></h4>
                             <p>Disini juga ada video video animasi seru yang menyenangkan</p>
                             <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                <i></i> <i></i> <i></i> <i></i>
                             </div>
                         </div>
                     </div>
@@ -58,13 +49,10 @@
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                         <div class="pic"><img src="assets/img/apaaja8.jpg" class="img-fluid" alt=""></div>
                         <div class="member-info">
-                            <h4><a href="">Printable</a></h4>
+                            <h4><a href="#content">Printable</a></h4>
                             <p>Kumpulan latihan yang dapat dicetak untuk mempermudah latihan</p>
                             <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                <i></i> <i></i> <i></i> <i></i>
                             </div>
                         </div>
                     </div>
@@ -133,7 +121,7 @@
     <!-- End games Section -->
 
     <!-- Video -->
-    <div class="video basic-4">
+    <div class="video basic-4" id="video">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -172,27 +160,37 @@
             <div class="row">
                 <center>
                     <div class="col-lg-8 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="" method="post"class="php-email-form">
+                        <form action="{{ route('main.store') }}" method="POST" class="php-email-form">
+                            @csrf
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        required>
+                                    <input type="text" name="name"
+                                        class="form-control @error('name') is-invalid @enderror" id="name" required>
+                                    @error('name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        required>
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                        name="email" id="email" required>
+                                    @error('email')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    required>
+                                <input type="text" class="form-control @error('subject') is-invalid @enderror"
+                                    name="subject" id="subject" required>
+                                @error('subject')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="5" required></textarea>
+                                <textarea class="form-control" name="message" rows="5" required> </textarea>
                             </div>
                             <div class="my-3">
                                 <div class="loading">Loading</div>

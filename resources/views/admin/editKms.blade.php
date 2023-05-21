@@ -5,7 +5,7 @@
     <div class="container pt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <form action="{{ route('admin.update', $kamus->id) }}" method="POST" class="shadow p-3 mb-5 bg-white">
+                <form action="{{ route('admin.updateKamus', $kamus->id) }}" method="POST" class="shadow p-3 mb-5 bg-white">
                     @method('PATCH')
                     @csrf
                     <h3 style="margin-bottom: 20px;"><b> Edit {{ $kamus->indonesia }} </b></h3>
@@ -14,12 +14,6 @@
                         {{-- gambar --}}
                         <div class="form-group">
                             <label for="gambar">Gambar</label>
-                            {{-- <input type="file" class="form-control @error('gambar') is-invalid @enderror" id="gambar"
-                                name="gambar" value="{{ old('gambar') }}">
-                            @error('gambar')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror --}}
-
                             @if ($kamus->gambar)
                                 <br>
                                 <img src="{{ asset('assets/img/kamus/' . $kamus->gambar) }}" alt="{{ $kamus->indonesia }}"
